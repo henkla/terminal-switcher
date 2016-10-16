@@ -1,5 +1,23 @@
 #!/bin/bash
 
+# This script will check if you have a terminal [or any other
+# process for that matter] running. If not, it will launch it.
+# If process already is running, the script will investigate
+# whether or not it has focus. If not, it will bring the process
+# up front. If, however, the process has focus (i.e the program
+# is on the very top), the script will hide it.
+
+# To utilize this script, you need the following:
+# - xdotool
+# - wmctrl
+
+# Use it like this:
+# - bind a button to run the script with an argument. This
+#   argument should be the program that you would like to
+#   run. See example below:
+#   - bind <some-button> to "./terminal.sh xfce4-terminal"
+
+ 
 
 # begin with investigating the PID of the process
 pid1=$(ps ax | grep -v grep | grep $1 | tail -n1 | cut -d " " -f2)
