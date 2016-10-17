@@ -1,4 +1,4 @@
-TERMINAL SWITCHER 0.9
+TERMINAL SWITCHER 1.0
 
 A simple bash script for quick access to your terminal emulator of choice.
 
