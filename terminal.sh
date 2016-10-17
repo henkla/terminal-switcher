@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Terminal Switcher 0.9
+# ---------------------
+
 # This script will check if you have a terminal [or any other
 # process for that matter] running. If not, it will launch it.
 # If process already is running, the script will investigate
@@ -17,7 +20,7 @@
 #   run. See example below:
 #   - bind <some-button> to "./terminal.sh xfce4-terminal"
 
- 
+
 
 # begin with investigating the PID of the process
 pid1=$(ps ax | grep -v grep | grep $1 | tail -n1 | cut -d " " -f2)
@@ -49,5 +52,8 @@ else
 
 	# $application is not running - launch process
 	$1
+	exit 0
 
 fi
+
+exit 0
