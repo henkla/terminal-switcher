@@ -26,23 +26,30 @@
 # is $application running?
 if pgrep $1 > /dev/null 2>&1; then
 
-	# get PID of active/focused window
-	foc=$(cat /proc/$(xdotool getwindowpid $(xdotool getwindowfocus))/comm)
+        # find out the name of the process that has focus
+        # this is divided into two variables due to how some terminals
+        # work. for instance, gnome-terminal will start a process server,
+        # and each actual terminal window will be named "gnome-terminal-"
+        # (notice the quotation marks in the end of the string). in order
+        # to handle this, the second foc ($foc2) is being stripped of the 
+        # last char.
+        foc1=$(cat /proc/$(xdotool getwindowpid $(xdotool getwindowfocus))/comm)
+        foc2=$(cat /proc/$(xdotool getwindowpid $(xdotool getwindowfocus))/comm | sed "s/.$//g")
 
-	# check whether PID1/2 equals that of FOC from above
-	if [ "$foc" = "$1" ]; then
+        # check whether or not our application indeed is this focused process
+        if [ "$foc1" = "$1" ] || [ "$foc2" = "$1" ]; then
 
-		# if it is focused, then minimize
-		xdotool windowminimize $(xdotool getactivewindow)
-		exit 0
+                # if it is focused, then minimize
+                xdotool windowminimize $(xdotool getactivewindow)
+                exit 0
 
-	else
+        else
 
-		# if it isn't focused then get focus
-		wmctrl -x -R $1
-		exit 0
+                # if it isn't focused -> get focus
+                wmctrl -x -R $1
+                exit 0
 
-	fi
+        fi
 
 else
 
