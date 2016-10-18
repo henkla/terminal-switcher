@@ -13,6 +13,7 @@ To utilize this script, you need the following tools installed:
 - xdotool                                                     
 - wmctrl                                                      
                                                                 
+
 Use it like this:                                             
 - bind a button to run the script with an argument. This      
   argument should be the program that you would like to       
