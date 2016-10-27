@@ -51,7 +51,7 @@ if pgrep $1 > /dev/null 2>&1; then
 
 else
 
-	# $application is not running - launch process
+	# application is not running - launch process
 	$1
 	exit 0
 
