@@ -21,8 +21,9 @@ This script will check if you have a terminal [or any other process for that mat
 > With the use of a custom bind button, you will always have access to your terminal of choice. 
 
 ### Example
+As you can see from the screenshot below, I like to have the `section` button bind to the script (the button just below the escape button). It sits neatly right there next to my little finger, always ready to pull up my terminal (or any other app) of choice!
 
-#### Key binding in XFCE
+#### *Key binding in XFCE*
 ![How to use the script](https://github.com/henkla/terminal-switcher/blob/master/resources/example-1.png)
 
-As you can see from the above screenshot, I like to have the `section` button bind to the script (the button just below the escape button). It sits neatly right there next to my little finger, always ready to pull up my terminal (or any other app) of choice!
+
