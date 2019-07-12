@@ -1,24 +1,10 @@
 #!/bin/bash
 
-# Terminal Switcher 1.0
-# ---------------------
-
-# This script will check if you have a terminal [or any other
-# process for that matter] running. If not, it will launch it
-# If process already is running, the script will investigate
-# whether or not it has focus. If not, it will bring the process
-# up front. If, however, the process has focus (i.e the program
-# is on the very top), the script will hide it.
-
-# To utilize this script, you need the following tools installed::
-# - xdotool
-# - wmctrl
-
-# Use it like this:
-# - bind a button to run the script with an argument. This
-#   argument should be the program that you would like to
-#   run. See example below:
-#   - bind <some-button> to "./terminal.sh xfce4-terminal"
+# This script was made by Henrik Larsson 2016-2019 and 
+# is free to use under the GNU GENERAL PUBLIC LICENSE Version 2.
+# ---
+# GitHub: https://github.com/henkla/terminal-switcher
+# Last Modified: 2019-07-12
 
 
 # is $application running?
