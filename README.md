@@ -10,8 +10,7 @@ This script will check if you have a terminal [or any other process for that mat
 
 #### Install all dependencies
 
-* APT-based distributions (Debian, Ubuntu and more): 
-  - `sudo apt update && apt install xdotool wmtrl -y`
+* APT-based distributions (Debian, Ubuntu and more): `sudo apt update && apt install xdotool wmtrl -y`
   
 ## Use it like this     
 * put script file in desired location (`~/.local/bin/ or /usr/local/bin`)
@@ -22,6 +21,7 @@ This script will check if you have a terminal [or any other process for that mat
 With the use of a custom binded button, you will always have access to your terminal of choice. 
 
 #### Example
+
 ![How to use the script](https://github.com/henkla/terminal-switcher/blob/master/terminal_sh.png)
 
 As you can see from the above screenshot, I like to have the section button binded to the script (the button just below the escape button). It sits neatly right there next to my little finger, always ready to pull up my terminal (or any other app) of choice!
