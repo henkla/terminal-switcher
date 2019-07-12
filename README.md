@@ -1,5 +1,5 @@
 # Terminal Switcher
-
+[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 > A simple bash script to quickly access your terminal emulator of choice.
 
 This script will check if you have a terminal [or any other process for that matter] running. If not, it will launch it. If process already is running, the script will investigate whether or not it has focus. If not, it will bring the process up front. If, however, the process has focus (i.e the program is on the very top), the script will hide it.                 
