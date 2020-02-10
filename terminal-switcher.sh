@@ -6,7 +6,6 @@
 # GitHub: https://github.com/henkla/terminal-switcher
 # Last Modified: 2019-07-12
 
-
 # is $application running?
 if pgrep $1 > /dev/null 2>&1; then
 
@@ -21,21 +20,16 @@ if pgrep $1 > /dev/null 2>&1; then
   foc2=$(cat /proc/$(xdotool getwindowpid $(xdotool getwindowfocus))/comm | sed "s/.$//g")
 
   # check whether or not our application indeed is this focused process
+  # if it is focused, then minimize
   if [ "$foc1" = "$1" ] || [ "$foc2" = "$1" ]; then
-
-    # if it is focused, then minimize
     xdotool windowminimize $(xdotool getactivewindow)
-
-  else
-
-    # if it isn't focused -> get focus
+  
+  # if it isn't focused -> get focus
+  else    
     wmctrl -x -R $1
-
   fi
 
+# application is not running - launch process
 else
-
-  # application is not running - launch process
   $1 $2
-
 fi
